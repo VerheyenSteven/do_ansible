@@ -3,6 +3,7 @@ apt-add-repository -y ppa:ansible/ansible
 apt-get update
 apt-get -y install ansible sshpass
 
+rm /etc/ansible/hosts
 ln -sf /vagrant/hosts /etc/ansible/hosts
 
 
@@ -19,8 +20,8 @@ chown vagrant:vagrant $KNOW_HOSTS_FILE
 # TODO: ssh-keyscan can be replaced if a playbook is created that copies the
 # files, ssh-agent needs to be implemented as wel.
 
+ssh-keygen -t rsa -b 2048 -N "" -f /home/vagrant/.ssh/id_rsa
 
 
-
-
-# ansible-playbook /vagrant/site.yml 
+ansible-playbook /vagrant/ssh-addkey.yml 
+ansible-playbook /vagrant/site.yml 
