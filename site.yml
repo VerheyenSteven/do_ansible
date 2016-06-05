@@ -13,7 +13,7 @@
   sudo: yes
   vars: 
     # https://github.com/VerheyenSteven/ansibleTestSite/releases
-    app_version: Versie-1.2
+    app_version: release-0.04
   serial: 1
 
   pre_tasks:
@@ -42,7 +42,7 @@
     file: path=/usr/share/nginx/html/ state=absent
 
   - name: deploy website content
-    git: repo=https://github.com/jweissig/episode-47.git
+    git: repo=https://github.com/VerheyenSteven/ansibleTestSite
          dest=/usr/share/nginx/html/
          version={{ app_version }}
 
