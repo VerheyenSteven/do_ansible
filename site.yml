@@ -11,9 +11,9 @@
 # web
 - hosts: webservers
   sudo: yes
-  vars:
-    # https://github.com/jweissig/episode-47/releases
-    app_version: release-0.03
+  vars: 
+    # https://github.com/VerheyenSteven/ansibleTestSite/releases
+    app_version: Versie-1.2
   serial: 1
 
   pre_tasks:
