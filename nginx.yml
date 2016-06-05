@@ -1,0 +1,12 @@
+---
+- hosts: webservers 
+  sudo: yes
+  tasks:
+      - name: Install nginx.
+        apt: name={{ item }} state=present update_cache=yes
+        with_items:
+            - nginx
+      - name: Make sure nginx is started and configure it to run at boot.
+        service: name=nginx state=started enabled=yes
+
+
