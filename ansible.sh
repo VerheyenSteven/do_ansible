@@ -19,3 +19,8 @@ chown vagrant:vagrant $KNOW_HOSTS_FILE
 # TODO: ssh-keyscan can be replaced if a playbook is created that copies the
 # files, ssh-agent needs to be implemented as wel.
 
+
+
+
+
+# ansible-playbook /vagrant/site.yml 

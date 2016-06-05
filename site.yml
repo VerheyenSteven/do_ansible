@@ -13,7 +13,7 @@
   sudo: yes
   vars: 
     # https://github.com/VerheyenSteven/ansibleTestSite/releases
-    app_version: release-0.04
+    app_version: release-0.05
   serial: 1
 
   pre_tasks:
